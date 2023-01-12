@@ -23,5 +23,5 @@ config checkout
 One line to do all of the above:
 
 ```bash
-curl https://github.com/CondensedMilk7/dots/blob/master/.local/bin/clone_config.sh | bash
+curl https://raw.githubusercontent.com/CondensedMilk7/dots/master/.local/bin/clone_config.sh | bash
 ```
