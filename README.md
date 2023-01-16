@@ -1,4 +1,6 @@
-# ArchLinux Config
+# My ArchLinux Config
+
+![my_arch](https://user-images.githubusercontent.com/82287873/212720822-3ac7936c-b9b1-4f21-b90b-856ac18b28f2.jpg)
 
 Here's [explanation of how it works](https://www.atlassian.com/git/tutorials/dotfiles)
 
