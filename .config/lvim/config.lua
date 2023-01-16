@@ -138,7 +138,7 @@ formatters.setup {
     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
     extra_args = { "--print-with", "100" },
     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    filetypes = { "typescript", "typescriptreact", "html", "javascript" },
+    -- filetypes = { "typescript", "typescriptreact", "html", "javascript", "css", "scss", "typescriptangular" },
   },
 }
 
@@ -168,6 +168,9 @@ lvim.plugins = {
   },
   {
     "xiyaowong/nvim-transparent"
+  },
+  {
+    "eandrju/cellular-automaton.nvim"
   },
   {
     "norcalli/nvim-colorizer.lua",
@@ -201,7 +204,7 @@ lvim.plugins = {
 --
 require("lvim.lsp.manager").setup("angularls")
 require("transparent").setup({
-  enable = false, -- boolean: enable transparent
+  enable = true, -- boolean: enable transparent
   extra_groups = { -- table/string: additional groups that should be cleared
     -- In particular, when you set it to 'all', that means all available groups
 
