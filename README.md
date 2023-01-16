@@ -2,25 +2,13 @@
 
 Here's [explanation of how it works](https://www.atlassian.com/git/tutorials/dotfiles)
 
-First clone the repo:
-```bash
-alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME" && \
-git clone https://github.com/CondensedMilk7/dots.git $HOME/.cfg
+The base apps installation:
+
+```
+sudo pacman -S i3 polybar kitty light feh neovim ttf-jetbrains-mono ranger dunst
 ```
 
-Make backups of configurations (if necessary) and checkout:
-```bash
-mkdir -p .config-backup && \
-config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
-xargs -I{} mv {} .config-backup/{}
-```
-
-Or just checkout:
-```
-config checkout
-```
-
-One line to do all of the above:
+This script does the following: install the repo, back up existing  config and checkout to the newer config.
 
 ```bash
 curl https://raw.githubusercontent.com/CondensedMilk7/dots/master/.local/bin/clone_config.sh | bash
