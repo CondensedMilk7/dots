@@ -235,8 +235,9 @@ exec_always setxkbmap -layout us,ge
 exec_always setxkbmap -option 'grp:alt_shift_toggle'
 exec picom
 exec batsignal
+exec xrandr --output HDMI-1 --set "Broadcast RGB" "Full"
 # exec ~/.local/bin/waitress --path /home/pt/Templates/retro-gradient/ --port 9091
 
 # Wallpaper
-exec_always feh --bg-fill ~/Pictures/Wallpapers/mountains.jpg
+exec_always feh --bg-fill ~/Pictures/Wallpapers/tuta.jpg
 exec_always ~/.config/polybar/launch.sh
