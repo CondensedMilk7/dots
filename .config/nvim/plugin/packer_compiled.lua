@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/pt/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/pt/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/pt/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/pt/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/pt/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/pt/.cache/nvim/packer_hererocks/2.1.1692616192/share/lua/5.1/?.lua;/home/pt/.cache/nvim/packer_hererocks/2.1.1692616192/share/lua/5.1/?/init.lua;/home/pt/.cache/nvim/packer_hererocks/2.1.1692616192/lib/luarocks/rocks-5.1/?.lua;/home/pt/.cache/nvim/packer_hererocks/2.1.1692616192/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/pt/.cache/nvim/packer_hererocks/2.1.1692616192/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -89,10 +89,20 @@ _G.packer_plugins = {
     path = "/home/pt/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["gruvbox.nvim"] = {
+    loaded = true,
+    path = "/home/pt/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/pt/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
+  },
+  ["langmapper.nvim"] = {
+    loaded = true,
+    path = "/home/pt/.local/share/nvim/site/pack/packer/start/langmapper.nvim",
+    url = "https://github.com/Wansmer/langmapper.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -144,6 +154,11 @@ _G.packer_plugins = {
     path = "/home/pt/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-treesitter-angular"] = {
+    loaded = true,
+    path = "/home/pt/.local/share/nvim/site/pack/packer/start/nvim-treesitter-angular",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-angular"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/pt/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -179,10 +194,20 @@ _G.packer_plugins = {
     path = "/home/pt/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
+  ["transparent.nvim"] = {
+    loaded = true,
+    path = "/home/pt/.local/share/nvim/site/pack/packer/start/transparent.nvim",
+    url = "https://github.com/xiyaowong/transparent.nvim"
+  },
   undotree = {
     loaded = true,
     path = "/home/pt/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  ["vscode.nvim"] = {
+    loaded = true,
+    path = "/home/pt/.local/share/nvim/site/pack/packer/start/vscode.nvim",
+    url = "https://github.com/Mofiqul/vscode.nvim"
   }
 }
 

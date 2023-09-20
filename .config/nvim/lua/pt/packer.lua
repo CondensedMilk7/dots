@@ -21,6 +21,9 @@ return require('packer').startup(function(use)
         'rose-pine/neovim',
         as = 'rose-pine',
     })
+    use { "ellisonleao/gruvbox.nvim" }
+    -- Packer:
+    use 'Mofiqul/vscode.nvim'
 
     use {
         'nvim-tree/nvim-tree.lua',
@@ -30,6 +33,7 @@ return require('packer').startup(function(use)
     }
 
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/nvim-treesitter-angular')
     use 'nvim-lua/plenary.nvim'
     use 'ThePrimeagen/harpoon'
     use 'mbbill/undotree'
@@ -56,6 +60,8 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+    use('xiyaowong/transparent.nvim')
+    use('Wansmer/langmapper.nvim')
 end)
 
 
