@@ -4,7 +4,7 @@
     width = 320
     height = 320
     origin = top-right
-    offset = 15x15
+    offset = 16x32
     scale = 0
     notification_limit = 0
     progress_bar = false

@@ -4,6 +4,7 @@ export PATH="/home/pt/.local/bin:$PATH"
 export PATH="/home/pt/go/bin:$PATH"
 export NODE_OPTIONS="--max-old-space-size=8192"
 export EDITOR="nvim"
+export VISUAL="nvim"
 export CAPACITOR_ANDROID_STUDIO_PATH="/usr/bin/android-studio"
 
 # Lines configured by zsh-newuser-install
@@ -46,6 +47,7 @@ alias vi="vim"
 alias vim="nvim"
 alias webstorm="swallow webstorm"
 alias zshconfig="nvim ~/.zshrc"
+alias notes="nvim ~/Documents/notes/"
 
 # Startup scripts
 

@@ -214,9 +214,10 @@ client.urgent           $background $warning      $warning
 # client.background       $background
 
 set $terminal kitty
-set $browser firefox
+set $browser google-chrome-stable
 set $ide code
 set $filemanager ranger
+set $locker ~/.local/bin/i3lock.sh
 
 # App Keybindings
 bindsym $mod+Return exec $terminal
@@ -226,6 +227,7 @@ bindsym $mod+Shift+ctrl+x exec poweroff
 bindsym Print exec maim ~/Pictures/screenshot.png
 bindsym $mod+Shift+Return exec $terminal $filemanager
 bindsym $mod+o exec rofi -modi emoji -show emoji
+bindsym $mod+ctrl+l exec $locker
 
 # Window gap keybindings
 bindsym $mod+Shift+plus gaps outer current plus 5 ; gaps inner current plus 5

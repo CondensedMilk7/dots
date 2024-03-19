@@ -11,7 +11,8 @@ set scroll-step 100
 
 # set default-bg                  "rgba(0, 0, 0, 0.9)"
 set recolor-lightcolor          "rgba(0, 0, 0, 0)"
-set recolor-darkcolor           "#a9b1d6"
+# set recolor-darkcolor           "#a9b1d6"
+set recolor-darkcolor           "#fff"
 
 # Attempt to recreate Tokyo Night in Zathura
 
