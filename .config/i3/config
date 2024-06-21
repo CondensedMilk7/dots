@@ -110,7 +110,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -238,11 +238,10 @@ bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
 # Startup
-exec_always setxkbmap -layout us,ge
-exec_always setxkbmap -option 'grp:alt_shift_toggle'
 exec picom
 exec batsignal
 exec xrandr --output HDMI-1 --set "Broadcast RGB" "Full"
+exec fcitx5
 # exec ~/.local/bin/waitress --path /home/pt/Templates/retro-gradient/ --port 9091
 
 # Wallpaper

@@ -1,23 +1,28 @@
 if true then
   return {
     -- add gruvbox
-    { "ellisonleao/gruvbox.nvim" },
     {
-      "rose-pine/neovim",
-      name = "rose-pine",
+      "ellisonleao/gruvbox.nvim",
       opts = {
-        styles = {
-          bold = true,
-          italic = false,
-          transparency = false,
+        bold = false,
+        italic = {
+          strings = false,
+          emphasis = false,
+          comments = false,
+          operators = false,
+          folds = false,
         },
       },
+    },
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000, opts = { no_italic = true } },
+    {
+      "rebelot/kanagawa.nvim",
     },
     -- Configure LazyVim to load color theme
     {
       "LazyVim/LazyVim",
       opts = {
-        colorscheme = "rose-pine",
+        colorscheme = "catppuccin-mocha",
       },
     },
     -- Additional treesitter parsers
@@ -59,9 +64,14 @@ if true then
           angularls = {
             filetypes = { "typescript", "html", "angular.html", "typescriptreact", "typescript.tsx" },
           },
+          html = {
+            filetypes = { "tsx", "jsx", "html", "angular.html" },
+          },
         },
+        inlay_hints = { enabled = false },
       },
     },
+
     -- change some telescope options and a keymap to browse plugin files
     {
       "nvim-telescope/telescope.nvim",
@@ -104,6 +114,12 @@ if true then
         level = 3,
         render = "minimal",
         stages = "static",
+      },
+      {
+        "olrtg/nvim-emmet",
+        config = function()
+          vim.keymap.set({ "n", "v" }, "<leader>xe", require("nvim-emmet").wrap_with_abbreviation)
+        end,
       },
     },
   }
