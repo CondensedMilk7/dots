@@ -48,6 +48,8 @@ alias vim="nvim"
 alias webstorm="swallow webstorm"
 alias zshconfig="nvim ~/.zshrc"
 alias notes="nvim ~/Documents/notes/"
+alias s="kitten ssh"
+alias sync_tetrarch="rsync -zvhr ~/Projects/tetrarch pridon@tetrarch.local:/home/pridon/"
 
 # Startup scripts
 
@@ -61,3 +63,10 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# bun completions
+[ -s "/home/pt/.bun/_bun" ] && source "/home/pt/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

@@ -14,15 +14,20 @@ if true then
         },
       },
     },
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000, opts = { no_italic = true } },
     {
-      "rebelot/kanagawa.nvim",
+      "sainnhe/gruvbox-material",
+      lazy = false,
+      config = function()
+        vim.g.gruvbox_material_background = "hard"
+      end
     },
+    { "folke/tokyonight.nvim", lazy = false, priority = 1000 },
+    { "Mofiqul/vscode.nvim" },
     -- Configure LazyVim to load color theme
     {
       "LazyVim/LazyVim",
       opts = {
-        colorscheme = "catppuccin-mocha",
+        colorscheme = "gruvbox-material",
       },
     },
     -- Additional treesitter parsers
@@ -94,7 +99,30 @@ if true then
         },
       },
     },
-
+    -- Git diff overlay
+    {
+      "echasnovski/mini.diff",
+      event = "VeryLazy",
+      keys = {
+        {
+          "<leader>go",
+          function()
+            require("mini.diff").toggle_overlay(0)
+          end,
+          desc = "Toggle mini.diff overlay",
+        },
+      },
+      opts = {
+        view = {
+          style = "sign",
+          signs = {
+            add = "▎",
+            change = "▎",
+            delete = "",
+          },
+        },
+      },
+    },
     -- add telescope-fzf-native
     {
       "telescope.nvim",
@@ -112,15 +140,13 @@ if true then
       "rcarriga/nvim-notify",
       opts = {
         level = 3,
-        render = "minimal",
-        stages = "static",
       },
-      {
-        "olrtg/nvim-emmet",
-        config = function()
-          vim.keymap.set({ "n", "v" }, "<leader>xe", require("nvim-emmet").wrap_with_abbreviation)
-        end,
-      },
+    },
+    {
+      "olrtg/nvim-emmet",
+      config = function()
+        vim.keymap.set({ "n", "v" }, "<leader>xe", require("nvim-emmet").wrap_with_abbreviation)
+      end,
     },
   }
 end
